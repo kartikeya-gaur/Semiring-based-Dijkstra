@@ -12,14 +12,12 @@ pip install osmnx networkx numpy matplotlib folium overpy
 cd src
 python main.py
 ```
-
-## What's new in v3
 - Namma Metro (42 stations, Purple + Green line) added as G_m
 - 5 query types: road / bus+walk / metro+walk / bus+metro+walk / full multimodal
 - Semiring vs Pareto front analysis with citations (Mohri 2002, Martins 1984, Hansen 1980)
 - Redesigned visualisations: fixed mode colors, core insight per chart
 
-## Mode color palette (consistent across all charts)
+## Mode color palette
 | Mode      | Color   | Meaning |
 |-----------|---------|---------|
 | Road      | #334155 | Auto/car — slate |
@@ -37,12 +35,12 @@ python main.py
 | (e) Full multimodal | G_r∪G_b∪G_m∪G_t | fare | Globally optimal |
 
 ## Semiring vs n-dimensional weight vectors
-Traditional multi-criteria routing computes the Pareto front —
+Traditional multi-criteria routing computes the Pareto front
 all non-dominated paths across k criteria. This is NP-hard for k≥2
 (Martins 1984) and the front can have exponential size O(2^k) (Hansen 1980).
 
-Semiring routing runs k separate Dijkstra queries — O(k×(V+E)logV) total
-(Mohri 2002) — and each result is guaranteed to lie on the Pareto front.
+Semiring routing runs k separate Dijkstra queries O(k×(V+E)logV) total
+(Mohri 2002) and each result is guaranteed to lie on the Pareto front.
 For a fixed decision context (e.g. "minimise fare"), semiring gives the
 exact optimal answer in polynomial time with no additional overhead.
 
