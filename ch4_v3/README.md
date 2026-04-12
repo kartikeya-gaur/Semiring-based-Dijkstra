@@ -1,6 +1,5 @@
-# Chapter 4 v3: Road + Bus + Metro Multimodal Routing
+# v3: Road + Bus + Metro Multimodal Routing
 
-**Course:** Introduction to Algorithms and Software Programming
 **References:** CLRS §24 · ACT4E §14.1/14.3/14.6
 
 ## Install
